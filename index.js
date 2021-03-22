@@ -20,10 +20,12 @@ var app = new Vue({
             this.user
           )
           .then((response) => {
-            console.log(response),
+            alert("response submitted"),
               (error) => {
-                cosole.log(error);
+                console.log(error);
               };
+            this.user.username = null;
+            this.user.email = null;
           });
       } else {
         if (!this.user.username) this.errors.push("username required");

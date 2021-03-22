@@ -29,6 +29,9 @@
   background-color: rgb(231, 231, 231);
   border: 1px solid rgb(231, 231, 231);
 }
+.btn-submit:hover{
+    background-color: rgb(195, 192, 192);
+}
 .list-group {
   display: grid;
   gap: 15px;
