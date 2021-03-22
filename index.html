@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Httprequest</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js" defer></script>
-    <script src="https://unpkg.com/vue-resource@1.5.2/dist/vue-resource.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/vue-resource@1.5.2/dist/vue-resource.min.js"
+      defer
+    ></script>
     <script src="index.js" defer></script>
-</head>
-<body>
-   <div id="app">
+  </head>
+  <body>
+    <div id="app">
       <h2>HTTP REQUEST</h2>
       <div class="form-container">
-          <form action="" method="get" class="form">
-            <label for="UserName" > UserName 
-            </label>
-                <input type="text" class="form-control" v-model = "user.username" placeholder="Enter Your Name" required>
-            <label for="Email"> Email 
-            </label>
-                <input type="email" class="form-control" v-model ='user.email' placeholder="Enter Your Email" required>
+        <form action="" method="get" class="form">
+            <p v-if = "errors.length">
+                <b>please correct the following error(s):</b>
+                <ul>
+                    <li v-for ='error in errors' class="err">{{error}}</li>
+                </ul>
+            </p>
+          <label for="UserName"> UserName </label>
+          <input
+            type="text"
+            class="form-control"
+            v-model="user.username"
+            placeholder="Enter Your Name"
+        
+          />
+          <label for="Email"> Email </label>
+          <input
+            type="email"
+            class="form-control"
+            v-model="user.email"
+            placeholder="Enter Your Email"
+          />
 
-            <input type="button" class="btn-submit" @click = 'submit' value="Submit">
-            <input type="button" class="btn-submit" @click = 'fetchData' value="Get Data">
+          <input
+            type="button"
+            class="btn-submit"
+            @click="submit"
+            value="Submit"
+          />
+          
+          <input
+            type="button"
+            class="btn-submit"
+            @click="fetchData"
+            value="Get Data"
+          />
         </form>
-              <ul class="list-group">
-                  <li v-for = 'u in users'>{{u.username}} - {{u.email}}</li>
-              </ul>
+        <ul class="list-group">
+          <li v-for="u in users">{{u.username}} - {{u.email}}</li>
+        </ul>
       </div>
-   </div> 
-</body>
+    </div>
+  </body>
 </html>

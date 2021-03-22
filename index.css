@@ -1,46 +1,48 @@
-#app{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgb(240, 233, 233);
-    align-items: center;
-    width: 800px;
-    margin: auto;
-    height: 150vh;
+#app {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(240, 233, 233);
+  align-items: center;
+  width: 800px;
+  margin: auto;
+  height: 150vh;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 500px;
-
-
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
 }
-.form-control{
-    height: 50px;
-    width: 70%;
-    border-radius: 10px;
-    border: 0;
-    background-color: rgb(230, 235, 235);
-    padding-left: 15px;
-
-} 
-.btn-submit{
-    height: 35px;
-    width: 30%;
-    border-radius: 20px;
-    background-color: rgb(231, 231, 231);
-    border: 1px soid rgb(231, 231, 231);
+.form-control {
+  height: 50px;
+  width: 70%;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(230, 235, 235);
+  padding-left: 15px;
 }
-.list-group{
-    display: grid;
-    gap: 15px;
+.btn-submit {
+  height: 35px;
+  width: 30%;
+  border-radius: 20px;
+  background-color: rgb(231, 231, 231);
+  border: 1px solid rgb(231, 231, 231);
+}
+.list-group {
+  display: grid;
+  gap: 15px;
 }
 
-
-li{
+.list-group>li {
+  list-style: none;
+  height: 25px;
+  border: 1px solid rgb(233, 232, 232);
+  padding: 5px;
+  border-radius: 5px;
+}
+.err{
     list-style: none;
-    height: 25px;
-    border: 1px solid gray;
+    font-size: larger;
     padding: 5px;
 }
